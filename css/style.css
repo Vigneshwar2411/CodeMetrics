@@ -1,0 +1,158 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+
+#content{
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-scrollbar {
+    display: none;
+}
+
+
+#MortgageText{
+  background-color: white;
+  height: 100px;
+  padding: 22px;
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+
+}
+
+.breadColor{
+  background-color: #ffffff;
+}
+
+#innerText{
+  background-color: #efedea !important;
+  height: 57px;
+
+  padding: 16px;
+}
+
+#innerText p {
+  text-align: center;
+}
+
+#nav-primary{
+  background-color: #006a4d;
+  color: white;
+  margin: 0px;
+}
+
+#brandText{
+  font-size: 18px;
+  font-family: sans-serif;
+  float: left;
+}
+
+#brandMenu{
+  float: right;
+}
+
+#login{
+  float: right;
+  margin: 35px 0px 10px 0px;
+}
+
+.navbar {
+  background-color: #2d8259 !important;
+  -webkit-border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-brand{
+  padding: 0 !important;
+}
+
+.navbar a{
+  color: white !important;
+}
+
+.breadcrumb{
+  -webkit-border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+  background-color: #FFFFFF !important;
+}
+
+.jumbotron{
+  width: 100% !important;
+  height: 247px !important;
+  background-color: white !important;
+  margin-top: 25px;
+  padding: 0 !important;
+}
+
+.jumbotron img{
+  width: 100% !important;
+}
+
+#nav-primary img {
+  height: 55px;
+  width: 50px;
+  margin: 30px 0px 30px 10px;
+}
+
+#MortgageCalc{
+  background-color: #025C69;
+  height: 100px;
+  padding: 22px;
+  margin-bottom: 25px;
+  color: white !important;
+}
+
+#card1, #card2, #card3 {
+  height: 265px;
+  width: 32.333%;
+}
+
+#card1{
+  background-color: #649C00;
+  margin-left: 0px;
+}
+
+#card2{
+  background-color: #0D5595;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+#card3{
+  background-color: #2178B0;
+  margin-right: 0px;
+}
+
+#zeroMargin{
+  margin: 0 !important;
+}
+
+#footerAsset{
+  background-color: #006a4d;
+
+}
+
+li: before {
+    content: "• ";
+    color: green; /* or whatever color you prefer */
+}

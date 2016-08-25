@@ -1,0 +1,6 @@
+{
+	"accept-ext":[".js"], 
+	"accept-dir":["Server"],
+	"accept-function-case":["camel"],
+	"accept-comment":["//","/**"]
+}

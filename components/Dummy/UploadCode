@@ -1,0 +1,67 @@
+in ui ///
+
+[8:20]
+<form ref="uploadForm" className="uploader" encType="multipart/form-data" >
+
+[8:21]
+<FlatButton label="Choose an Image" labelPosition="before">
+     <input type="file" ref="file"accept="image/*"  onClick={this.uploadFile.bind(this)} />
+</FlatButton>
+
+[8:22]
+in ajax call method //
+
+[8:22]
+uploadFile(e) {
+
+ var fd = new FormData();
+// var fd1 = this.refs.file.getDOMNode(this);
+ fd.append( 'file', this.refs.file.files[0] );
+ //console.log(this.refs.file.value);
+ //console.log(this.refs.button.value);
+
+
+ $.ajax({
+     url: restUrl+'/api/check',
+    // url:"http://quizrt2:8001/topics",
+     data: fd,
+     processData: false,
+     contentType: false,
+     type: 'POST',
+     success: function(data) {
+       console.log('success');
+     },
+     error: function() {
+       console.error('error while uploading file');
+     },
+   });
+ e.preventDefault()
+}
+
+[8:24]
+mulaura [8:23 AM]  
+in app.js server //app.use(formidable.parse());
+app.post('/api/check',function(req,res){
+console.log('-------------- abc from express floow---------------',req.body);
+//console.log('-------------- abc from express floow---------------',req.body.file);
+console.log('-------------- abc from express floow---------------',req.body.file.path);
+//console.log(req.body.incre+'   0----------------------');
+//console.log(req.body.id+'    ---------------------');
+
+cloudinary.config({
+cloud_name: 'quizrt-social',
+api_key: '866928426995948',
+api_secret: 'a0_PX4nmJqak_k3lc29Ges5dcNw'
+});
+
+cloudinary.uploader.upload(req.body.file.path, function(result) {
+console.log(result)
+});
+
+[8:25]
+in app.js at starting// var cloudinary = require('cloudinary');
+var formidable = require('express-formidable');
+
+[8:26]
+npm packages //    npm install express-formidable
+npm install cloudinary
